@@ -1,0 +1,23 @@
+
+<div class="login-form">
+<div class="panel panel-default">
+	<div class="panel-heading">{{title}}</div>
+	<div class="panel-body">
+		<form>
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="text" class="form-control" name="email" placeholder="Email" 
+				 [(ngModel)]="name" >
+			</div>
+            <p></p> 
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="password" class="form-control" name="password" placeholder="password" 
+				[(ngModel)]="password" >
+			</div>
+           <p></p>
+			<button class="btn btn-default" (click)="login()">Login</button>  	
+		</form>
+	</div>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+   
+.login-form {
+   position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 25%;
+    margin: 10px;
+}
+
+.login-form > input
+{
+padding: 10px;
+
+}

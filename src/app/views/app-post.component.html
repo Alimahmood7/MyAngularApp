@@ -1,0 +1,58 @@
+
+<!-- <input class="" name="pName" placeholder="name" [(ngModel)]="Pname"> <br>
+<input class="" name="pDisc" placeholder="description" [(ngModel)]="Pdesc"> <br> 
+<button class="btn btn-primary" (click)="aProject()" >Save</button>-->
+<div class="container">
+	<div class="row">
+		<button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal">New Project</button>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Modal Header</h4>
+			</div>
+			<div class="modal-body">
+
+			<input class="form-control" name="pName" placeholder="name" [(ngModel)]="Pname"> 
+				<input class="form-control" name="pDisc" placeholder="description" [(ngModel)]="Pdesc"> 
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button class="btn btn-primary" (click)="aProject()" >Save</button>
+			</div>
+		</div>
+
+	</div>
+</div> 
+
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="jumbotron col-md-4" *ngFor="let pro of posts">
+			<div class="">
+			<h1>{{post.name}}</h1>
+				<span (click)="delete(post.id)" class="glyphicon glyphicon-remove" ></span>
+			</div>
+			<p>
+				<small>Last updated:{{post.updated_at | date:medium }}</small>
+			</p>
+			<a [routerLink]="['/show',post.id]" ><button class="btn btn-primary">Show Detail</button></a>
+		</div>
+
+	</div>
+
+</div>
+
+
+

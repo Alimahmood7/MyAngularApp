@@ -1,0 +1,34 @@
+<form (submit)="addTodo()">
+<h2>Add todo</h2>
+<input type="text" placeholder="todos here" name="text" [(ngModel)]="text" >
+</form>
+
+
+<p>
+    todos list
+</p>
+
+<ul *ngFor="let todo of todos">
+	
+  <li>{{todo.text}} <button (click)="deleteTodo(todo.text)">X</button></li> 
+
+
+</ul>
+{{msgError}}
+<ul *ngFor="let emp of empArr">
+   <li> {{emp.name}} </li>
+</ul>
+
+
+<form #myForm="ngForm">
+
+ <input type="text" placeholder="Enter Name" name="Name" [(ngModel)]="name"> {{name}}
+ <select name="type" [(ngModel)]="type">
+ <option [value]="value">Type 1</option>
+ <option value="2">Type 2</option>	
+ </select> {{type}}
+<button (click)="submit(myForm.value)">Submit</button>
+
+
+
+</form>
